@@ -1,0 +1,33 @@
+import { CircleUserRound } from 'lucide-react'
+import { DropdownMenu, DropdownMenuTrigger } from './ui/dropdown-menu'
+import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react'
+import { DropdownMenuContent, DropdownMenuItem } from '@radix-ui/react-dropdown-menu';
+import { Link } from 'react-router-dom';
+import { Separator } from './ui/separator';
+import { Button } from './ui/button';
+
+export default function UsernameMneu() {
+    const { user, logout } = useAuth0();
+  return (
+      <DropdownMenu>
+          <DropdownMenuTrigger className='flex items-center px-3 font-bold hover:text-black hover:cursor-pointer  gap-2'>
+              <CircleUserRound className='text-black' />
+              {user?.email}
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+              <DropdownMenuItem>   
+              <Link to="/user-profile" className='font-bold hover:text-black'>
+                  User Profile
+              </Link>
+              </DropdownMenuItem>
+              <Separator />
+              <DropdownMenuItem>
+                  <Button className='flex flex-1 font-bold bg-white text-black hover:bg-black hover:text-white' onClick={() => logout()}>
+                      Log Out
+                  </Button>
+              </DropdownMenuItem>
+          </DropdownMenuContent>
+      </DropdownMenu>
+  )
+}
