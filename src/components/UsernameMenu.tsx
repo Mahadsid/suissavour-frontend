@@ -16,13 +16,19 @@ export default function UsernameMneu() {
           </DropdownMenuTrigger>
           <DropdownMenuContent>
               <DropdownMenuItem>   
-              <Link to="/user-profile" className='font-bold hover:text-black'>
+              <Link to="/manage-restaurant" className='font-bold hover:text-black'>
+                  Manage Restaurant
+              </Link>
+              </DropdownMenuItem>
+              <Separator className='my-2'/>
+              <DropdownMenuItem>   
+              <Link to="/user-profile" className='font-bold text-gray-600'>
                   User Profile
               </Link>
               </DropdownMenuItem>
-              <Separator />
+              <Separator className='my-2'/>
               <DropdownMenuItem>
-                  <Button className='flex flex-1 font-bold bg-white text-black hover:bg-black hover:text-white' onClick={() => logout()}>
+                  <Button className='flex flex-1 font-bold bg-white text-black hover:bg-gray-700 hover:text-white' onClick={() => logout()}>
                       Log Out
                   </Button>
               </DropdownMenuItem>

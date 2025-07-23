@@ -10,10 +10,10 @@ import { useEffect } from "react";
 
 const formSchema = z.object({
     email: z.string().optional(),
-    name: z.string().min(1, "name is required"),
+    name: z.string().min(1, "Name is required"),
     address: z.string().min(1, "Address is required"),
-    city: z.string().min(1, "city is required"),
-    country: z.string().min(1, "country is required"),
+    city: z.string().min(1, "City is required"),
+    country: z.string().min(1, "Country is required"),
 });
 
 type UserFormData = z.infer<typeof formSchema>;
