@@ -1,14 +1,27 @@
 import pizza from "../assets/pizza.jpg"
 import order from "../assets/fast_food_order.jpg"
+import SearchBar, { type SearchForm } from "@/components/SearchBar"
+import { useNavigate } from "react-router-dom"
+
+
 
 export default function HomePage() {
+
+    const navigate = useNavigate();
+    const handleSearchSubmit = (searchFormVlaues: SearchForm) => {
+        navigate({
+            pathname : `/search/${searchFormVlaues.searchQuery}`
+        })
+    }
+    
   return (
       <div className='flex flex-col gap-12'>
-          <div className='bg-white rounded-lg shadow-2xl py-8 flex flex-col gap-5 text-center -mt-16'>
+          <div className='md:px-32 bg-white rounded-lg shadow-2xl py-8 flex flex-col gap-5 text-center -mt-16'>
               <h1 className='text-2xl font-bold tracking-tight text-black'>
                   Welcome to SUISSAVOUR!
               </h1>
               <span className='text-xl'>Order your meal here.</span>
+              <SearchBar placeHolder="Enter City" onSubmit={handleSearchSubmit} />
           </div>
           <div className='grid md:grid-cols-2 gap-5'>
               <img src={pizza} alt="pizza pic" />
