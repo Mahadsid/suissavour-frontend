@@ -21,7 +21,7 @@ export default function HomePage() {
                   Welcome to SUISSAVOUR!
               </h1>
               <span className='text-xl'>Order your meal here.</span>
-              <SearchBar placeHolder="Enter City" onSubmit={handleSearchSubmit} />
+              <SearchBar placeHolder="Enter City. ex = 'Manchester' " onSubmit={handleSearchSubmit} />
           </div>
           <div className='grid md:grid-cols-2 gap-5'>
               <img src={pizza} alt="pizza pic" />

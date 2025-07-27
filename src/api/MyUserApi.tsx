@@ -106,7 +106,7 @@ export const useUpdateMyUser = () => {
         isPending,
         isSuccess,
         error,
-        reset } = useMutation<void, Error, UpdateMyUserRequest>({
+        reset } = useMutation({
             mutationFn: updateMyUserRequest,
         });
     
@@ -120,7 +120,7 @@ export const useUpdateMyUser = () => {
     
     return {
         updateUser, isPending
-    };
+    }
     
 
 };

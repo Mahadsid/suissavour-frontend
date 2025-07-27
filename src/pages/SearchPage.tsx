@@ -1,5 +1,5 @@
 import PaginationSelector from "@/components/PaginationSelector";
-import { useSearchRestaurants } from "../api/RestauranrApi";
+import { useSearchRestaurants } from "../api/RestaurantApi";
 
 import SearchBar, { type SearchForm } from "@/components/SearchBar";
 
