@@ -6,8 +6,9 @@ export default function Footer() {
                   suissavour
               </span>
               <span className='text-white font-bold tracking-tight flex gap-4'>
-                  <span>Privacy Policy</span>
-                  <span>Terms of Service</span>   
+                  <div>
+          Made with ❤️ by <a href="https://mahadsid.github.io/portfolio/" className="font-medium hover:underline" target="_blank">Muhammad Mahad</a>
+        </div> 
               </span>
           </div>
     </div>
